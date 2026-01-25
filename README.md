@@ -48,21 +48,17 @@ Filters automatically re-fetch data from the backend and update charts in real t
 6. Record counts
 
 ### ✨ Features
-
-Fully dynamic & responsive dashboard
-
-Server-side + client-side data handling
-
-Clean dark UI for better readability
-
-Modular and reusable chart components
+> Fully dynamic & responsive dashboard
+> Server-side + client-side data handling
+> Clean dark UI for better readability
+> Modular and reusable chart components
 
 ### 🚀 How to Run Locally
-# Backend
+Backend
 ``` npm install
 npm run dev ```
 
-# Frontend
+Frontend
 ``` npm install
 npm run dev ```
 
