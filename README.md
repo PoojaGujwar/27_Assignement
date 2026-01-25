@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 📊 Data Visualization Dashboard
+🧩 Project Overview
 
-## Getting Started
+This project is an interactive data visualization dashboard built using the provided JSON dataset.
+The dashboard displays key insights such as Intensity, Likelihood, and Relevance with dynamic filters and charts.
 
-First, run the development server:
+The goal of this project is to transform raw data into meaningful visual insights using modern web technologies.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🛠 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js (App Router)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+React.js
 
-## Learn More
+Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+Chart.js (react-chartjs-2)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Node.js
 
-## Deploy on Vercel
+Express.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MongoDB (data stored from given JSON)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📈 Key Visualizations
+
+Average Intensity vs Year (Line Chart)
+
+Average Likelihood vs Year (Line Chart)
+
+Summary cards for:
+
+Avg Intensity
+
+Avg Likelihood
+
+Avg Relevance
+
+Total Records
+
+### 🎛 Filters Implemented
+
+The dashboard supports dynamic filtering using API queries:
+
+Topic
+
+Sector
+
+Region
+
+Country
+
+(Structure allows easy extension for PEST, SWOT, Source, End Year, etc.)
+
+Filters automatically re-fetch data from the backend and update charts in real time.
+
+### 🔄 Data Flow
+
+JSON data is stored in MongoDB
+
+Backend APIs fetch data based on selected filters
+
+Frontend consumes APIs and updates:
+
+Cards
+
+Charts
+
+Record counts
+
+### ✨ Features
+
+Fully dynamic & responsive dashboard
+
+Server-side + client-side data handling
+
+Clean dark UI for better readability
+
+Modular and reusable chart components
+
+### 🚀 How to Run Locally
+# Backend
+*** npm install
+npm run dev ***
+
+# Frontend
+*** npm install
+npm run dev ***
+
+
+### 📌 Conclusion
+
+This dashboard demonstrates the ability to:
+
+Work with real datasets
+
+Design APIs
+
+Build interactive data-driven UIs
+
+Present insights visually in a professional manner
