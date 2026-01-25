@@ -54,19 +54,24 @@ Filters automatically re-fetch data from the backend and update charts in real t
 > Modular and reusable chart components
 
 ### 🚀 How to Run Locally
+
 Backend
-``` npm install
-npm run dev ```
+```bash
+npm install
+npm run dev
+```
 
 Frontend
-``` npm install
-npm run dev ```
+```bash
+npm install
+npm run dev
+```
 
 
 ### 📌 Conclusion
-
 This dashboard demonstrates the ability to:
-Work with real datasets
-Design APIs
-Build interactive data-driven UIs
-Present insights visually in a professional manner
+
+* Work with real datasets
+* Design APIs
+* Build interactive data-driven UIs
+* Present insights visually in a professional manner
