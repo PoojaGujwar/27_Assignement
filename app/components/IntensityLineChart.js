@@ -4,7 +4,7 @@ import {Chart as ChartJs, LinearScale, CategoryScale, Tooltip, LineElement, Poin
 ChartJs.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend)
 
 export default function IntensityLineChart({data}){
-    console.log("Intensity Chart", data)
+    //console.log("Intensity Chart", data)
     const years ={}
 
     data.forEach(item=>{
@@ -23,7 +23,8 @@ export default function IntensityLineChart({data}){
         datasets:[{
             label:"Avg Intensity",
             data:values,
-            tension:0.4
+            tension:0.4,
+            borderColor: "green"
         }]
     }
     const options={

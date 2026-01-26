@@ -6,16 +6,17 @@ ChartJS.register(LineElement, Tooltip, CategoryScale, LinearScale, Legend, Point
 export default function Likelihood({ data }) {
     const years = {}
     data.forEach((item) => {
-        if (!item.end_year || !item.Likelihood) return;
+        if (!item.end_year || !item.likelihood) return;
 
         if (!years[item.end_year]) {
             years[item.end_year] = { total: 0, count: 0 }
         }
-        years[item.end_year].total += Number(item.Likelihood)
+        years[item.end_year].total += Number(item.likelihood)
         years[item.end_year].count += 1
     })
     const labels = Object.keys(years).sort()
     const values = labels.map(y => (years[y].total / years[y].count).toFixed(1))
+    console.log("Likelihhood",values)
 
     const chartData = {
         labels,

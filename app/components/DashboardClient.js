@@ -3,6 +3,7 @@ import Cards from "./Cards"
 import { useEffect, useState } from "react";
 import IntensityLineChart from "./IntensityLineChart"
 import LikelihoodChart from "./LikelihoodChart"
+import Filters from "./Filters"
 
 function average(data, key) {
   const valid = data.filter(d => d[key] != null)
@@ -12,7 +13,10 @@ function average(data, key) {
 }
 
 export default function DashboardClient({ data, filters }) {
-const [selected, setSelected] = useState({});
+const [selected, setSelected] = useState({ topic: "",
+  sector: "",
+  region: "",
+  country: "",});
   const [filterData, setFilterData] = useState(data)
   const avgIntensity = average(filterData, "intensity");
   const avgLikelihood = average(filterData, "likelihood");
@@ -43,28 +47,8 @@ const [selected, setSelected] = useState({});
         <Cards title="Avg Relevance" value={avgRelevance} />
         <Cards title="Total Records" value={filterData.length} />
       </section>
-      <section className="bg-slate-800 p-4 rounded-xl mb-6 ">
-        <h1 className="text-lg font-semibold mb-4 text-slate-200">Filters</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        <select onChange={(e)=>handleChange("topic",e.target.value)} className="bg-slate-900 p-2 rounded border border-slate-700 "><option value="">Topic</option>
-          {filters.topics?.map((val) => <option key={val}>{val}</option>)}
-        </select>
-        <select onChange={(e)=>handleChange("sector",e.target.value)} className="bg-slate-900 p-2 rounded border border-slate-700">
-          <option value="">Sector</option>
-          {filters.sectors?.map((val) => <option key={val}>{val}</option>)}
-        </select>
-        <select onChange={(e) => handleChange("region", e.target.value)} className="bg-slate-900 p-2 rounded border border-slate-700">
-          <option value="">Region</option>
-          {filters.regions?.map(r => <option key={r}>{r}</option>)}
-        </select>
-
-        <select onChange={(e) => handleChange("country", e.target.value)} className="bg-slate-900 p-2 rounded border border-slate-700">
-          <option value="">Country</option>
-          {filters.countries?.map(c => <option key={c}>{c}</option>)}
-        </select>
-        </div>
-
-      </section>
+       <Filters filters={filters} onChange={handleChange} selected={selected}/>
+      
       <section className="space-y-6">
         <IntensityLineChart data={filterData}/>
          <LikelihoodChart data={filterData}/>
