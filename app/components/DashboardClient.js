@@ -41,7 +41,7 @@ const [selected, setSelected] = useState({ topic: "",
   };
   return (
     <div>
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 ">
         <Cards title="Avg Intensity" value={avgIntensity} />
         <Cards title="Avg Likelihood" value={avgLikelihood} />
         <Cards title="Avg Relevance" value={avgRelevance} />

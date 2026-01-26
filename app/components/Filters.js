@@ -1,6 +1,6 @@
 export default function Filters({ filters, onChange, selected }) {
     return (
-            <section className="bg-slate-900 p-2 rounded-lg border border-slate-700 text-slate-200">
+            <section className="bg-slate-900 p-2 rounded-lg border border-slate-700 text-slate-200 m-3">
 <h1 className="text-lg font-semibold mb-4 text-slate-200">Filters</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <select value={selected.topic}
