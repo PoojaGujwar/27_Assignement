@@ -27,7 +27,7 @@ const [selected, setSelected] = useState({ topic: "",
   useEffect(()=>{
     const fetchData=async()=>{
       const query = new URLSearchParams(selected).toString()
-      const res = await fetch(`http://localhost:4000/v1/dashboard-data?${query}`)
+      const res = await fetch(`https://27backend-production.up.railway.app/v1/dashboard-data?${query}`)
       const resData = await res.json()
       console.log(resData)
       setFilterData(resData)
