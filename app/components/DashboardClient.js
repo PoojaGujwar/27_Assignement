@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import IntensityLineChart from "./IntensityLineChart"
 import LikelihoodChart from "./LikelihoodChart"
 import Filters from "./Filters"
+import axios from "axios";
 
 function average(data, key) {
   const valid = data.filter(d => d[key] != null)
@@ -27,7 +28,7 @@ const [selected, setSelected] = useState({ topic: "",
   useEffect(()=>{
     const fetchData=async()=>{
       const query = new URLSearchParams(selected).toString()
-      const res = await fetch(`https://27backend-production.up.railway.app/v1/dashboard-data?${query}`)
+      const res = await axios(`https://27backend-production.up.railway.app/v1/dashboard-data?${query}`)
       const resData = await res.json()
       console.log(resData)
       setFilterData(resData)

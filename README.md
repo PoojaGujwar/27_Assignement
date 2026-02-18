@@ -55,13 +55,13 @@ Filters automatically re-fetch data from the backend and update charts in real t
 
 ### 🚀 How to Run Locally
 
-Backend
+### Backend
 ```bash
 npm install
 npm run dev
 ```
 
-Frontend
+### Frontend
 ```bash
 npm install
 npm run dev
